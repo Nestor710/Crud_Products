@@ -1,0 +1,23 @@
+.jumbotron {
+    contain: 0;
+}
+
+.display-4 {
+    text-align: center;
+}
+
+.hr-mo {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #007bff, rgba(0, 0, 0, 0));
+}
+
+.pagination {
+    text-align: center;
+}
+
+.buscar,
+.btn-group {
+    display: flex;
+    justify-content: center;
+}

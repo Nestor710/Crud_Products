@@ -1,0 +1,18 @@
+.display-4 {
+    text-align: center;
+}
+
+.col-form-label {
+    text-align: end;
+}
+
+.hr-mo {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #007bff, rgba(0, 0, 0, 0));
+}
+
+.move {
+    margin-top: 10px;
+    float: right;
+}

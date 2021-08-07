@@ -1,0 +1,30 @@
+<div class="container mt-5">
+    <h1 class="display-4">Agregar producto</h1>
+</div>
+<div class="mt-5">
+    <form class="container av" (ngSubmit)="createProduct()">
+        <hr class="hr-mo">
+        <br>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-3 col-form-label">Name</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="inputEmail3" name="name" placeholder="Name" [(ngModel)]="product.name">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="desc" class="col-sm-3 col-form-label">Description</label>
+            <div class="col-sm-6">
+                <textarea type="text" class="form-control" id="desc" placeholder="Description" name="desc" [(ngModel)]="product.description"></textarea>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="select" class="col-sm-3 col-form-label">Categories</label>
+            <div class="col-sm-6">
+                <select class="custom-select" id="inputGroupSelect02" name="categoria" [(ngModel)]="product.category_id">
+                  <option *ngFor="let category of categories" [ngValue]="category.id">{{ category.name}}</option>
+                </select>
+                <button class="btn btn-primary move" type="submit">Enviar</button>
+            </div>
+        </div>
+    </form>
+</div>
