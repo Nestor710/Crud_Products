@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import { CardComponent } from './card/card.component';
 import { RouterModule } from '@angular/router';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { PaginationPipe } from './pagination.pipe';
+import { BuscadorPipe } from './buscador.pipe';
 import { FormsModule } from '@angular/forms';
 
 
 
 @NgModule({
-  declarations: [CardComponent, PaginationPipe],
+  declarations: [CardComponent, BuscadorPipe],
   exports: [CardComponent],
   imports: [
     CommonModule,
