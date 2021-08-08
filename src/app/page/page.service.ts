@@ -10,7 +10,7 @@ export class PageService {
   constructor( private http: HttpClient  ) { }
   
   getProducts() {
-    return this.http.get(`${environment}/products`);
+    return this.http.get(`https://boiling-shelf-68728.herokuapp.com/products`);
   }
 
   getProductById(id:any) {
