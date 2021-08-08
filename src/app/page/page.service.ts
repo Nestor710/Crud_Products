@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import Swal from 'sweetalert2';
-import { environment } from '../../environments/environment';
+import { environment } from '../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +10,7 @@ export class PageService {
   constructor( private http: HttpClient  ) { }
   
   getProducts() {
-    return this.http.get(`${environment.apiUrl}/products`);
+    return this.http.get(`${environment}/products`);
   }
 
   getProductById(id:any) {
