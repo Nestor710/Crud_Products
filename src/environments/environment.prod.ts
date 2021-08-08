@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://boiling-shelf-68728.herokuapp.com/'
+  apiUrl: 'https://boiling-shelf-68728.herokuapp.com'
 };
