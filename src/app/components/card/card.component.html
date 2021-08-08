@@ -9,8 +9,8 @@
         <input type="text" class="form-control col-3" placeholder="Buscar" #txtBuscar (keyup)="onSearch( txtBuscar.value )">
     </div>
     <div class="row mt-3">
-        <!-- <div class="col-sm-3" *ngFor="let product of products | pagination:page:search"> -->
-        <div class="col-sm-3" *ngFor="let product of products | paginate: { itemsPerPage: 4, currentPage: page} | buscador:search">
+        <!-- <div class="col-sm-3" *ngFor="let product of products | paginate: { itemsPerPage: 4, currentPage: page} | buscador:page:search"> -->
+        <div class="col-sm-3" *ngFor="let product of products | buscador:page:search">
             <div class="card animate_animated animate__fadeInUp">
                 <div class="card-body">
                     <div class="card-title"> {{ product.name }}</div>
@@ -28,17 +28,16 @@
             <br>
         </div>
         <!-- **** Paginación elaborada por mi ***** -->
-        <!-- <div class="container">
+        <div class="container">
             <div class="btn-group col-12">
                 <button class="btn btn-outline-info" (click)="prevPage()" [disabled]="page === 0">Anteriores</button>
                 <button class="btn btn-outline-primary" (click)="nextPage()" [disabled]="page === 5">Siguientes</button>
             </div>
-        </div> -->
-        <div class="container">
+        </div>
+        <!-- <div class="container">
             <div class="pages col-12 mt-3">
                 <pagination-controls (pageChange)="page = $event" responsive="true" previousLabel="Anteriores" nextLabel="Siguente"></pagination-controls>
             </div>
-        </div>
-
+        </div> -->
     </div>
 </div>

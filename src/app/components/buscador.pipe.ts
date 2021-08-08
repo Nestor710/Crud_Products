@@ -6,9 +6,9 @@ import { Product } from '../product';
 })
 export class BuscadorPipe implements PipeTransform {
 
-  transform(product: Product[], /* page: number = 0 */ search:any = ''): Product[] {
-    /* return product.slice(page, page + 4); */
-    /* if (search.length === 0) */
+  transform(product: Product[], page: number = 0, search:any = ''): Product[] {
+    if (search.length === 0)
+    return product.slice(page, page + 4);
     const productoFiltrado = product.filter( prod => prod.name.includes( search ) );
     return productoFiltrado;      
   }
